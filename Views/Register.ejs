@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('./Config/Import') %>
+</head>
+<body>
+
+    <div class="flex justify-center px-5 pt-[200px]">
+        <div class="w-full max-w-3xl">
+            <div>
+                <div>
+                    <span class="flex justify-center text-4xl text-blue-500">
+                        <i class="ph-duotone ph-users-three"></i>
+                    </span>
+                    <h1 class="text-center">
+                        Sing Up
+                    </h1>
+                </div>
+                <br>
+                <form action="/api/auth/register" method="POST">
+                    <div>
+                        <div>
+                            <label for="username">
+                                Username
+                            </label>
+                        </div>
+                        <div>
+                            <input type="text" name="username" id="username" placeholder="Username" class="w-full px-5 py-1 rounded-xl bg-zinc-100 border">
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div>
+                            <label for="username">
+                                Password
+                            </label>
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" placeholder="Password" class="w-full px-5 py-1 rounded-xl bg-zinc-100 border">
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-500 text-white rounded-xl border border-blue-500 hover:bg-white hover:text-blue-500 transition duration-300 py-1">
+                            Sing Up
+                        </button>
+                    </div>
+                </form>
+                <br>
+                <div class="text-center text-xs">
+                    <p>Already have an account? <a class="text-blue-500" href="/login">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
